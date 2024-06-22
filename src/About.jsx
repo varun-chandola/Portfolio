@@ -11,7 +11,7 @@ const About = () => {
             className="bg-white hovering"
             style={{
               background: "#033f47",
-              padding: "10px ",
+              // padding: "10px ",
               borderRadius: "20px",
               margin: "30px",
               height: "130px",
