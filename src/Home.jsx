@@ -2,22 +2,25 @@ import React from "react";
 
 const Home = () => {
   return (
-    <>
-      <div className="mb-20 mt-10 lg:flex xl:h-screen">
-        <div className="flex flex-col items-center m-3 lg:w-1/2 xl:py-36">
-          <h1 className="info text-2xl">Hi , I am</h1>
-          <h1 className="head text-4xl">Varun Chandola</h1>
-          <p className="info flex flex-col text-2xl items-center lg:text-3xl">
-            <br />I am a <span className="head">FrontEnd developer !</span>
-            Upskilling to become a <br />
-            Full Stack Developer
-          </p>
-        </div>
-        <div className="hovering rounded-full overflow-hidden m-auto h-60 w-48 lg:h-4/5 lg:w-auto lg:rounded-2xl">
-          <img src="varun.jpg" className="w-full h-full object-cover lg:h-[600px]" />
+    <div className="flex flex-col md:flex-row items-center justify-center p-4 h-screen">
+      <div className="text-center md:text-left mb-8 md:mb-0 md:w-1/2">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug md:leading-relaxed p-4 md:p-8">
+          Hi, I am 
+          <span className="text-green-500 text-3xl md:text-5xl lg:text-6xl underline decoration-wavy block mt-2">
+            Varun Chandola
+          </span>
+          <br className="hidden md:block" />
+          I am a Front-End Developer!
+          <br />
+          Upskilling to become a Full Stack Developer
+        </h1>
+      </div>
+      <div className="w-full md:w-1/2 flex justify-center">
+        <div className="hovering h-40 md:h-56 lg:h-64 w-40 md:w-56 lg:w-64 rounded-full overflow-hidden flex items-center justify-center">
+          <img src="varun_.jpg" alt="Varun Chandola" className="object-cover w-full h-full" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

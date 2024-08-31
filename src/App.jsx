@@ -4,7 +4,7 @@ import Home from "./Home"
 import Nav from "./Nav"
 import Contact from "./Contact"
 import Projects from "./Projects";
-import Blog from "./Blog";
+import Skills from "./Skills";
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Nav />
       <Home />
       <About />
+      <Skills />
       <Projects />
       <Contact />
-      <Blog />
     </>
   );
 }

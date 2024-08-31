@@ -1,121 +1,64 @@
 import React from "react";
-
 const Projects = () => {
   return (
     <>
-      <div className="head text-[40px] mx-[35%]">
-        <h1>My Recent Projects</h1>
-      </div>
-      <div id="projects">
-        <div className="flex flex-col bg-white h-auto w-[90vw] p-[20px] m-auto my-10 rounded-3xl hovering xl:w-3/5">
-          <div className="mx-[40px] xl:w-2/4 xl:mx-[25%]">
-            <img src="randomPassword.png" />
-          </div>
-          <div className="flex items-center flex-col xl:h-auto">
-            <h1 className="text-4xl text-black">Random Password Generator</h1>
-            <p className="hidden lg:contents lg:text-xl">
-              The application allows you to create a random strong password and
-              you can set the length of the password along with the choice to
-              add numbers or special characters or both in your password . You
-              can also copy the password to clipboard
-            </p>
-            <a
-              href="https://github.com/varun-chandola/React-learning/tree/main/04-Random-password-generator"
-              target="_blank"
-            >
-              <button className="my-[30px] bg-black p-6 w-[230px] rounded-full text-white text-3xl">
-                Github
-              </button>
-            </a>
-            <a
-              href="https://strong-random-password.netlify.app/"
-              target="_blank"
-              className="text-2xl font-bold"
-            >
-              Live Link 🚀
-            </a>
-          </div>
+        <div className="text-5xl text-green-400 font-extrabold mb-4 underline decoration-wavy ml-10 leading-normal" id="projects">
+          <h1>My Recent Projects</h1>
         </div>
 
-        <div className="flex flex-col bg-white h-auto w-[90vw] p-[20px] m-auto my-10 rounded-3xl hovering xl:w-3/5">
-          <div className="mx-[40px]">
-            <img src="tic-tac.png" width={850} />
-          </div>
-          <div className="flex items-center flex-col">
-            <h1 className="text-4xl text-black mx-10">TIC TAC TOE</h1>
-            <p className="hidden lg:contents lg:text-xl">
-              Just A Tic Tac Toe (X/O) Game .
-            </p>
-            <a
-              href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/X0_game"
-              target="_blank"
-            >
-              <button className="my-[30px] bg-black p-6 w-[230px] rounded-full text-white text-3xl">
-                Github
-              </button>
-            </a>
-            <a href="https://xo-app.netlify.app/" target="_blank" className="text-2xl font-bold"
-            >
-            Live Link 🚀
-            </a>
-          </div>
-        </div>
+        <div className="bg-[#222222] p-8">
+          <h2 className="text-3xl text-gray-300 font-semibold mb-10">Here are some of my notable projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div className="flex flex-col bg-white h-auto w-[90vw] p-[20px] m-auto my-10 rounded-3xl hovering xl:w-3/5">
-          <div className="mx-[40px]">
-            <img src="rockPaper.png" width={1000} />
-          </div>
-          <div className="flex items-center flex-col">
-            <h1 className="text-4xl text-black mx-10">ROCK PAPER SCISSOR</h1>
-            <p className="hidden lg:contents lg:text-xl">
-              Rock Paper Scissor Game .It is a player VS computer game . Also
-              keep the track of all the games won and tied between the user and
-              the Compute
-            </p>
-            <a
-              href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/rockPaperScissor"
-              target="_blank"
-            >
-              <button className="my-[30px] bg-black p-6 w-[230px] rounded-full text-white text-3xl">
-                Github
-              </button>
-            </a>
-            <a
-              href="https://rock-paper-scissors-js-game-varun.netlify.app/"
-              target="_blank"
-              className="text-2xl font-bold"
-            >
-              Live Link 🚀
-            </a>
-          </div>
-        </div>
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
+              <img src="randomPassword.png" alt="Random Password Generator" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h2 className="text-2xl text-white font-bold mb-2">Random Password Generator</h2>
+                <p className="text-gray-400 mb-4">Generate strong, random passwords with customizable length and options to include numbers and special characters. Easily copy passwords to clipboard.</p>
+                <div className="flex space-x-4">
+                  <a href="https://github.com/varun-chandola/React-learning/tree/main/04-Random-password-generator" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
+                  <a href="https://strong-random-password.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
+                </div>
+              </div>
+            </div>
 
-        <div className="flex flex-col bg-white h-auto w-[90vw] p-[20px] m-auto my-10 rounded-3xl hovering xl:w-3/5">
-          <div className="mx-[40px]">
-            <img src="trump.png" width={800} />
-          </div>
-          <div className="flex items-center flex-col">
-            <h1 className="text-4xl text-black flex mx-10">
-              Random Quote Generator
-            </h1>
-            <p className="hidden lg:contents lg:text-xl">
-              After Each click it generates a Random funny quote by Donald Trump
-            </p>
-            <a
-              href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/randomQuotes"
-              target="_blank"
-            >
-              <button className="my-[30px] bg-black p-6 w-[230px] rounded-full text-white text-3xl">
-                Github
-              </button>
-            </a>
-            <a href="https://random-trump-quote.netlify.app/" target="_blank" className="text-2xl font-bold"
-            >
-            Live Link 🚀
-            </a>
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
+              <img src="tic-tac.png" alt="Tic Tac Toe" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h2 className="text-2xl text-white font-bold mb-2">Tic Tac Toe</h2>
+                <p className="text-gray-400 mb-4">A classic Tic Tac Toe game built with JavaScript. Play against the computer or a friend.</p>
+                <div className="flex space-x-4">
+                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/X0_game" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
+                  <a href="https://xo-app.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
+              <img src="rockPaper.png" alt="Rock Paper Scissors" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h2 className="text-2xl text-white font-bold mb-2">Rock Paper Scissors</h2>
+                <p className="text-gray-400 mb-4">A player vs. computer game with tracking for wins and ties. Simple yet engaging.</p>
+                <div className="flex space-x-4">
+                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/rockPaperScissor" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
+                  <a href="https://rock-paper-scissors-js-game-varun.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
+              <img src="trump.png" alt="Random Trump Quote" className="w-full h-40 object-cover" />
+              <div className="p-6">
+                <h2 className="text-2xl text-white font-bold mb-2">Generate a Random Quote by Donald Trump</h2>
+                <p className="text-gray-400 mb-4">Get a random quote from Donald Trump with each refresh. A fun and simple project demonstrating API usage.</p>
+                <div className="flex space-x-4">
+                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/randomQuotes" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
+                  <a href="https://random-trump-quote.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

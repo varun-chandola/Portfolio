@@ -1,51 +1,50 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Nav = () => {
-  const [symbol, setSymbol] = useState("+");
-  const toggleNav = () => {
-    symbol === "+" ? setSymbol("X") : setSymbol("+");
-    const val = document.querySelector('.allNavs')
-    symbol === "+" ? val.classList.remove('hidden') : val.classList.add('hidden')
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-[#033f47] info py-2">
-      <div className="flex justify-between flex-wrap m-2 p-5 text-xl xl:flex xl:p-0">
-        <a
-          href="https://github.com/varun-chandola"
-          target="_blank"
-          className="p-3 text-3xl"
-        >
-          Varun Chandola
+    <header className="flex flex-col md:flex-row items-center p-3">
+      <div className="w-full flex justify-between items-center mb-4 md:mb-0">
+        <a href='https://github.com/varun-chandola/' target="_blank">
+          <img src='../github-mark-white.png' width={40} alt="GitHub" />
         </a>
-        <button className="md:hidden" onClick={() => toggleNav()}>{symbol}</button>
-        <div className="flex flex-wrap hidden allNavs md:contents">
-          <a className='px-5 home w-80 lg:my-3 xl:w-auto' href="/">
-            Home
-          </a>
-          <a className="px-5 about w-80 lg:my-3 xl:w-auto" href="#about">
-            About
-          </a>
-          <a className="px-5 project w-80 lg:my-3 xl:w-auto" href="#projects">
-            Projects
-          </a>
-          <a className="px-5 contact  w-80 lg:my-3 xl:w-auto" href="#contactMe">
-            Contact
-          </a>
-          <a className="px-5 interest  w-80 lg:my-3 xl:w-auto" href="#blog">
-            Blogs
-          </a>
-          <a
-            className="px-5 w-80 lg:my-3"
-            href="Resume.pdf"
-            target="_blank"
+        {/* Hamburger Icon */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={handleToggle}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Resume
-          </a>
-        </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
-    </div>
+      {/* Navigation Links */}
+      <div
+        className={`w-full flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0 ${isOpen ? 'block' : 'hidden'} md:flex`}
+      >
+        <a className="text-white hover:text-yellow-300 hover:underline hover:decoration-wavy" href="#about">About</a>
+        <a className="text-white hover:text-yellow-300 hover:underline hover:decoration-wavy" href='#projects'>Projects</a>
+        <a className="text-white hover:text-yellow-300 hover:underline hover:decoration-wavy" href='#skills'>Skills</a>
+        <a className="text-white hover:text-yellow-300 hover:underline hover:decoration-wavy" href='#contact'>Contact</a>
+        <a href='/Resume Varun Chandola.pdf' target="_blank" className="text-white hover:text-yellow-300 hover:underline hover:decoration-wavy">Resume</a>
+      </div>
+    </header>
   );
 };
 
