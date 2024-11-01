@@ -1,64 +1,59 @@
 import React from "react";
+import Nav from "./Nav";
+import { Link } from "react-router-dom";
 const Projects = () => {
+  const projects = [
+    {
+      image: `videoPlex.png`,
+      name: `VideoPlex`,
+      github: `https://github.com/varun-chandola/VideoPlex`,
+      live: ``,
+      status: `building`
+    },
+    {
+      image: `blog.png`,
+      name: `Postify`,
+      github: `https://github.com/varun-chandola/Postify`,
+      live: ``,
+      status: `building`
+    },
+    {
+      image: `ideaHub.png`,
+      name: `IdeaHub`,
+      github: `https://github.com/varun-chandola/IdeaHub`,
+      live: `https://ideahub-nywg.onrender.com/`,
+      status: `deployed`
+    },
+  ]
   return (
     <>
-        <div className="text-5xl text-green-400 font-extrabold mb-4 underline decoration-wavy ml-10 leading-normal" id="projects">
-          <h1>My Recent Projects</h1>
-        </div>
+      <Nav />
+      <div className="p-8">
+        <h2 className="text-3xl font-semibold mb-10 flex items-center justify-center">Here are some of my projects</h2>
 
-        <div className="bg-[#222222] p-8">
-          <h2 className="text-3xl text-gray-300 font-semibold mb-10">Here are some of my notable projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
-              <img src="randomPassword.png" alt="Random Password Generator" className="w-full h-40 object-cover" />
-              <div className="p-6">
-                <h2 className="text-2xl text-white font-bold mb-2">Random Password Generator</h2>
-                <p className="text-gray-400 mb-4">Generate strong, random passwords with customizable length and options to include numbers and special characters. Easily copy passwords to clipboard.</p>
-                <div className="flex space-x-4">
-                  <a href="https://github.com/varun-chandola/React-learning/tree/main/04-Random-password-generator" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
-                  <a href="https://strong-random-password.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
-                </div>
-              </div>
+        {projects.map(each => (
+          <div className="relative flex flex-row w-1/2 justify-center items-center m-auto rounded-2xl bg-gray-100 mb-10 hover:shadow-gray-900 hover:shadow-xl hover:scale-y-105 hover:scale-x-105 hover:transition duration-75">
+            <div className="p-8">
+              <img src={each.image} width={600} />
             </div>
 
-            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
-              <img src="tic-tac.png" alt="Tic Tac Toe" className="w-full h-40 object-cover" />
-              <div className="p-6">
-                <h2 className="text-2xl text-white font-bold mb-2">Tic Tac Toe</h2>
-                <p className="text-gray-400 mb-4">A classic Tic Tac Toe game built with JavaScript. Play against the computer or a friend.</p>
-                <div className="flex space-x-4">
-                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/X0_game" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
-                  <a href="https://xo-app.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+              <div className="flex flex-col gap-3 text-center">
+                <div className="flex flex-col p-4">
+                  <h1 className="font-bold text-white text-4xl">{each.name}</h1>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
-              <img src="rockPaper.png" alt="Rock Paper Scissors" className="w-full h-40 object-cover" />
-              <div className="p-6">
-                <h2 className="text-2xl text-white font-bold mb-2">Rock Paper Scissors</h2>
-                <p className="text-gray-400 mb-4">A player vs. computer game with tracking for wins and ties. Simple yet engaging.</p>
-                <div className="flex space-x-4">
-                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/rockPaperScissor" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
-                  <a href="https://rock-paper-scissors-js-game-varun.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hovering">
-              <img src="trump.png" alt="Random Trump Quote" className="w-full h-40 object-cover" />
-              <div className="p-6">
-                <h2 className="text-2xl text-white font-bold mb-2">Generate a Random Quote by Donald Trump</h2>
-                <p className="text-gray-400 mb-4">Get a random quote from Donald Trump with each refresh. A fun and simple project demonstrating API usage.</p>
-                <div className="flex space-x-4">
-                  <a href="https://github.com/varun-chandola/javascript-learning/tree/main/Projects/randomQuotes" target="_blank" className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Github</a>
-                  <a href="https://random-trump-quote.netlify.app/" target="_blank" className="inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Live Link 🚀</a>
-                </div>
+                <Link className="bg-black p-2 rounded-2xl text-white font-bold hover:bg-gray-800" to={each.github} target="_blank">
+                  Github
+                </Link>
+                <Link className="bg-blue-400 p-2 rounded-2xl text-white font-bold hover:bg-blue-600" to={each.live} target="_blank">
+                  Live
+                </Link>
+                <p className="font-bold underline text-gray-800">{each.status}</p>
               </div>
             </div>
           </div>
-        </div>
+        ))}
+      </div>
     </>
   );
 };

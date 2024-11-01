@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-        font-family: "Bricolage Grotesque";
-        background-color: #222222;
-    }
-
-.hovering:hover{
-    box-shadow: -5px 5px 0px yellow;
-    transform: translate(10px,-1px);
-    transition: 0.6s ease;
+body {
+    font-family: "Bricolage Grotesque";
 }
