@@ -7,8 +7,8 @@ const Home = () => {
     <>
       <Nav />
       <div className="flex items-center justify-center flex-col h-[85vh]">
-        <div className="mb-32 h-[40vh] flex flex-col items-center justify-center">
-          <h1 className="font-bold text-5xl max-w-[500]">
+        <div className="mb-32 h-[40vh] flex flex-col items-center justify-center max-w-[50vw] sm:flex sm: flex-col sm:text-center">
+          <h1 className="font-bold text-5xl">
             👋Hello there ! I am Varun
           </h1>
           <h2 className="text-2xl text-gray-500">I am a Full Stack Dev , who loves to build new projects</h2>
